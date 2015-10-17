@@ -1,4 +1,4 @@
-# gce-output-stream
+# gce-output-stream [![Build Status](https://travis-ci.org/stephenplusplus/gce-output-stream.svg)](https://travis-ci.org/stephenplusplus/gce-output-stream)
 > Get a stream of output from a Google Compute Engine instance
 
 ```sh
