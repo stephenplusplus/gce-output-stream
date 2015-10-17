@@ -1,6 +1,6 @@
 {
   "name": "gce-output-stream",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Get a stream of output from a Google Compute Engine instance",
   "main": "index.js",
   "scripts": {
