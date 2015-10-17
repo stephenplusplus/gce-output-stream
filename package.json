@@ -1,0 +1,44 @@
+{
+  "name": "gce-output-stream",
+  "version": "0.0.0",
+  "description": "Get a stream of output from a Google Compute Engine instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "google compute engine",
+    "compute engine",
+    "google",
+    "gce",
+    "instance",
+    "vm",
+    "container",
+    "output",
+    "logger",
+    "logging",
+    "logs",
+    "log",
+    "stream"
+  ],
+  "author": "Stephen Sawchuk <sawchuk@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "standard": "^5.3.1"
+  },
+  "dependencies": {
+    "google-auto-auth": "^0.2.2",
+    "retry-request": "^1.2.1",
+    "split-array-stream": "^1.0.0",
+    "string-format-obj": "^1.0.1",
+    "through2": "^2.0.0"
+  },
+  "standard": {
+    "global": [
+      "before",
+      "describe",
+      "it"
+    ]
+  }
+}
