@@ -8,13 +8,13 @@ $ npm install --save gce-output-stream
 var outputStream = require('gce-output-stream')
 
 outputStream({
-    projectId: 'grape-spaceship-123',
-    zone: 'us-central1-a',
-    name: 'app-http-server'
-  })
-  .on('data', function (line) {
-    // one line of output
-  })
+  projectId: 'grape-spaceship-123',
+  zone: 'us-central1-a',
+  name: 'app-http-server'
+})
+.on('data', function (line) {
+  // `line` is a single line of output
+})
 ```
 
 
@@ -23,7 +23,11 @@ outputStream({
 This module uses [google-auto-auth](https://github.com/stephenplusplus/google-auto-auth) to get the required access token. If you don't meet the **[requirements for automatic authentication](https://github.com/stephenplusplus/google-auto-auth#automatic-if)**, you will need to provide the same configuration object detailed in that readme.
 
 ```js
-outputStream({ keyFile: 'key.json' })
+outputStream({
+  authConfig: {
+    keyFile: 'key.json'
+  }
+})
 ```
 
 
