@@ -38,7 +38,7 @@ it('should throw if a zone name is missing', function () {
 })
 
 it('should get the output as a stream', function (done) {
-  this.timeout(0)
+  this.timeout(10000)
 
   outputStream({
     zone: 'us-central1-a',
@@ -52,4 +52,19 @@ it('should get the output as a stream', function (done) {
     this.end()
   })
   .on('end', done)
+})
+
+it('should return an error from the API response', function (done) {
+  this.timeout(10000)
+
+  outputStream({
+    zone: 'us-central1-a',
+    name: 'instance-name-that-doesnt-exist',
+    projectId: 'nth-circlet-705',
+    authConfig: { credentials: require('./key.json') }
+  })
+  .on('error', function (err) {
+    assert.strictEqual(err.response.statusCode, 404)
+    done()
+  })
 })

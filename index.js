@@ -30,6 +30,12 @@ module.exports = function (cfg) {
       if (err) return outputStream.destroy(err)
 
       retryRequest(reqOpts, function (err, resp, body) {
+        if (body.error && body.error.errors && body.error.errors[0]) {
+          var error = body.error.errors[0]
+          err = new Error(error.message)
+          err.response = resp.toJSON()
+        }
+
         if (err) return outputStream.destroy(err)
 
         var newOutput
