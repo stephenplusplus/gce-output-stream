@@ -39,7 +39,7 @@ outputStream({
 
 - Type: `Stream`
 
-An output stream with the results of iterative calls to [`getSerialOutput`](https://cloud.google.com/compute/docs/reference/v1/instances/getSerialPortOutput). Each data event emitted is a single line.
+An output stream with the results of iterative calls to [`getSerialPortOutput`](https://cloud.google.com/compute/docs/reference/v1/instances/getSerialPortOutput). Each data event emitted is a single line.
 
 ##### config.projectId
 
