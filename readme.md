@@ -69,7 +69,7 @@ The name of the zone the instance is running in. (Ex: `us-central1-a`)
 
 If you want to re-use an auth client from [google-auto-auth](http://gitnpm.com/google-auto-auth), pass an instance here.
 
-###### config.authConfig
+##### config.authConfig
 
 - Type: `object`
 - *Optional*
