@@ -8,7 +8,6 @@ $ npm install --save gce-output-stream
 var outputStream = require('gce-output-stream')
 
 outputStream({
-  projectId: 'grape-spaceship-123',
   zone: 'us-central1-a',
   name: 'app-http-server'
 })
@@ -40,13 +39,6 @@ outputStream({
 - Type: `Stream`
 
 An output stream with the results of iterative calls to [`getSerialPortOutput`](https://cloud.google.com/compute/docs/reference/v1/instances/getSerialPortOutput). Each data event emitted is a single line.
-
-##### config.projectId
-
-- Type: `String`
-- **Required**
-
-The projectId your instance is hosted under.
 
 ##### config.name
 
@@ -81,5 +73,12 @@ See [`authConfig`](https://github.com/stephenplusplus/google-auto-auth#authconfi
 - Type: `Number`
 - *Optional*
 - Default: `1`
+
+##### config.projectId
+
+- Type: `String`
+- *Optional*
+
+The projectId your instance is hosted under.
 
 The COM or serial port to retrieve data from. Acceptable values are `1`-`4`.

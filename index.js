@@ -9,7 +9,6 @@ var through = require('through2')
 module.exports = function (cfg) {
   if (!cfg) throw new Error('Configuration object must be specified')
   if (!cfg.name) throw new Error('An instance name must be specified')
-  if (!cfg.projectId) throw new Error('A projectId must be specified')
   if (!cfg.zone) throw new Error('A zone name must be specified')
 
   cfg.authConfig = cfg.authConfig || {}

@@ -19,15 +19,6 @@ it('should throw if an instance name is missing', function () {
   }, 'An instance name must be specified')
 })
 
-it('should throw if a projectId is missing', function () {
-  assert.throws(function () {
-    outputStream({
-      name: 'instance-name',
-      zone: 'zone-name'
-    })
-  }, 'A projectId must be specified')
-})
-
 it('should throw if a zone name is missing', function () {
   assert.throws(function () {
     outputStream({
