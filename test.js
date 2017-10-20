@@ -32,8 +32,8 @@ it('should get the output as a stream', function (done) {
   this.timeout(10000)
 
   outputStream({
-    zone: 'us-central1-a',
-    name: 'sillycloud',
+    zone: 'us-central1-b',
+    name: 'gae-debug-20160421t085455-c6z4',
     projectId: 'nth-circlet-705',
     authConfig: { credentials: require('./key.json') }
   })
