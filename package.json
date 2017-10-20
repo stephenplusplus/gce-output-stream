@@ -34,6 +34,9 @@
     "string-format-obj": "^1.1.0",
     "through2": "^2.0.0"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "standard": {
     "global": [
       "before",
